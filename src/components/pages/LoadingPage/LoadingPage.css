@@ -1,0 +1,58 @@
+
+.back-ground{
+    width: 100%;
+    height: 100%;
+    background-color:#08122A;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  #759AFF
+        #08122A
+        */
+}
+
+.nav-bar{
+    position: fixed;
+    width: 100%;
+}
+
+/*.loading-circles{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    -webkit-animation-name: loading-box;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-play-state: running;
+}
+
+.loading-circles > div{
+    background-color:#759AFF ;
+    width: 80px;
+    height: 80px;
+    margin: 40px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-circles a{
+    color: white;
+}
+.loading-circles .circle-1{
+    opacity: 0.1;
+}
+.loading-circles .circle-2{
+    opacity: 0.3;
+}
+.loading-circles .circle-3{
+    opacity: 0.1;
+}
+*/
