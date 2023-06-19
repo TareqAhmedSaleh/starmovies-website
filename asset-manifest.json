@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/starmovies-website/static/css/main.6db0731e.css",
+    "main.js": "/starmovies-website/static/js/main.a0575b27.js",
+    "static/media/AllPosters.jpg": "/starmovies-website/static/media/AllPosters.3aa7529203cee8fcb427.jpg",
+    "static/media/starmoviesLogo.svg": "/starmovies-website/static/media/starmoviesLogo.1ae1358c9391bd1be9195694d9262f17.svg",
+    "static/media/logo.svg": "/starmovies-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/starmovies-website/index.html",
+    "main.6db0731e.css.map": "/starmovies-website/static/css/main.6db0731e.css.map",
+    "main.a0575b27.js.map": "/starmovies-website/static/js/main.a0575b27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6db0731e.css",
+    "static/js/main.a0575b27.js"
+  ]
+}
