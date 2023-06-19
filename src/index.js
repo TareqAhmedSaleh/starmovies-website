@@ -14,7 +14,7 @@ import Register from './components/pages/Get Started/Register';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "starmovies-website",
     element:<App/>,
   },
   {
