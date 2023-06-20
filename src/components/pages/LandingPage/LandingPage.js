@@ -105,7 +105,7 @@ const scrollToThird = () =>{
       <div className={styles.leftSide}>
         <h1 className={styles.title}>Be Ready. . .</h1>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
-        <Link to="/guestMode">Enplore</Link>
+        <Link to="/login">Enplore</Link>
       </div>
       <div className={styles.rightSide}></div>
     </section>
