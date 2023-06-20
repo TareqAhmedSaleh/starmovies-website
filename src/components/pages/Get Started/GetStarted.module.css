@@ -11,6 +11,9 @@
     --backGroundColor2 : #0D1935;
     --whiteColor : #ffffff;
 }
+html,body{
+    background-color: var(--backGroundColor);
+}
 .parentContainer{
     width: 100%;
     height: 100vh;
@@ -36,37 +39,41 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    padding: 20px;
+   /* backdrop-filter: blur(20px);
+    --webkit-backdrop-filter : blur(20px);
+    background-color: rgb(13, 25, 53,0.5);
+    box-shadow: 0px 0px 2px 20px rgb(13, 25, 53,0.5);*/
 }
 form{
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: var(--backGroundColor);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 10px;
+    z-index: 5;
 }
 h1{
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--primaryColor);
     font-weight: 500;
 }
 span{
     font-family: 'Roboto', sans-serif;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     color: var(--whiteColor);
     font-weight: 400;
     margin-bottom: 0.5rem;
 }
 .leftSide p{
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .leftSide p > a{
@@ -77,17 +84,17 @@ span{
 
 }
 .leftSide .emailBox,.leftSide .passwordBox{
-    width: 70%;
-    margin: 8px 0;
+    width: 100%;
+    margin: 12px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 .leftSide input[type = "text"] , input[type = "password"]{
-    background-color: var(--backGroundColor2);
+    background-color: transparent;
     width: 100%;
-    padding: 0.6rem 2rem;
+    padding: 1rem 3.5rem;
     border: none;
     border-radius:4px ;
     -webkit-border-radius:4px ;
@@ -95,35 +102,42 @@ span{
     -ms-border-radius:4px ;
     -o-border-radius:4px ;
     outline: none;
-    font-size: 0.5rem;
+    font-size: 1rem;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     color: var(--whiteColor);
+    border: 1.5px solid var(--primaryColor);
     
 }
 .leftSide input:focus{
-    box-shadow: 0px 0px 50px #0A173D;
+    /*box-shadow: 0px 0px 2px 10px rgb(13, 25, 53,0.2);
+    box-shadow: 0 0 2px 8px rgb(117, 154, 255, 0.1);
+    border-bottom: 1px solid var(--primaryColor);*/
+
 
 }
-.leftSide input::placeholder{
-    font-size: 0.5rem;
-    font-weight: 400;
+
+.leftSide input::-webkit-input-placeholder{
+    font-size: 1rem;
+    font-weight: 300;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
-    color: var(--whiteColor);
+    color: var(--whiteColor) !important;
 }
 .leftSide section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 24px;
     /* background-color: var(--primaryColor);*/
-    font-size: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
+    margin: 8px 0;
 }
 .leftSide section a{
     color: var(--whiteColor);
@@ -132,12 +146,11 @@ span{
 .leftSide section a:hover{
     text-decoration: underline;
 }
-
 .leftSide form button[type= "submit"]{
     background-color: var(--primaryColor);
-    margin: 8px 0;
-    width: 70%;
-    padding: 0.6rem 0;
+    margin: 16px 0 20px;
+    width: 100%;
+    padding: 1rem 0;
     border: none;
     border-radius:4px ;
     -webkit-border-radius:4px ;
@@ -145,11 +158,50 @@ span{
     -ms-border-radius:4px ;
     -o-border-radius:4px ;
     outline: none;
-    font-size: 0.5rem;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     color: var(--whiteColor);
+}
+.leftSide section div input[type= "checkbox"]{
+    /*width:"0.5rem";
+    height:"0.5rem";
+    outline:"none";
+    border:"0.5px solid #759AFF";
+    */margin-right:"20px";
+    border: 1px solid var(--whiteColor);
+
+    -moz-appearance: none;
+    height: 16px;
+    width: 16px;
+}
+::-ms-reveal{
+    display: none;
+    /* hide show password eye icon on microsoft edge  */ 
+}
+.leftSide .orBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+}
+.leftSide form .orBox label{
+    font-size: 0.8rem; 
+    font-family:'Roboto', sans-serif;
+    margin: 16px 0;
+    font-weight: 400;
+    text-align: center;
+    width: 40%;
+}
+
+.leftSide .orBox > div{
+    height: 50px;
+    width: 30%;
+    background-color: #759AFF;
+    clip-path: ellipse(49% 1% at 52% 50%);
 }
 
 .leftSide .altLogins{
@@ -157,7 +209,7 @@ span{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 100%;
     /*background-color: var(--primaryColor);*/
     margin: 8px 0;
     gap: 0.5rem;
@@ -165,8 +217,8 @@ span{
 
 .leftSide .altLogins > button{
     width: 100%;
-    gap: 0.25rem;
-    padding: 0.6rem 0;
+    gap: 0.5rem;
+    padding: 1rem 0;
     background-color: var(--backGroundColor2);
     border: none;
     border-radius:2px ;
@@ -175,7 +227,7 @@ span{
     -ms-border-radius:2px ;
     -o-border-radius:2px ;
     outline: none;
-    font-size: 0.5rem;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
@@ -184,8 +236,26 @@ span{
     justify-content: center;
     align-items: center;
 }
+.circlesPattern{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url(../../../photos/circlesPattern.svg);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center center;
+}
 
-@media (max-width:640px){
+
+@media (max-width:1200px){
     .parentContainer .rightSide,.parentContainer.rightSide img{
         display: none;
         visibility: hidden;
@@ -193,4 +263,61 @@ span{
     .leftSide{
         width: 100%;
     }
+    .leftSide section{
+        font-size: 0.8rem;
+    }
+    form{
+        width: 70%;
+    }
+    form h1{
+        font-size: 1.5rem;
+    }
+    form span{
+        font-size: 1.2rem;
+    }
+    font p{
+        font-size: 1rem;
+    }
+    .leftSide .altLogins > button{
+        font-size: 0.8rem;
+    }
+    .leftSide input[type = "text"] , input[type = "password"],.leftSide form button[type= "submit"]{
+        font-size: 0.8rem;
+
+    }
+    .leftSide input::-webkit-input-placeholder{
+        font-size: 0.8rem;
+    }
+
 }
+
+
+
+/*.circlesPattern > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.circlesPattern div > div {
+    border-radius: 100%;
+    background : radial-gradient(circle,rgb(117, 154, 255, 0.3) 30%, rgb(117, 154, 255, 0.2) 60%); 
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 300px;
+    margin: 80px;
+
+    box-shadow: 0 0 80px 50px rgb(117, 154, 255, 0.2);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+} 
+.circlesPattern > div:nth-child(1){
+    margin-left: 100rem;
+
+}
+.circlesPattern > div:nth-child(3){
+    margin-right: 100rem;
+}*/

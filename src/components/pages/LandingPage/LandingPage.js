@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../../NavBar';
 import styles from './LandingPage.module.css'
+import { Link } from 'react-router-dom';
+import { faL, faSlash } from '@fortawesome/free-solid-svg-icons';
 
 function LandingPage() {
 
@@ -59,26 +61,36 @@ function LandingPage() {
     }
 	},[]);*/
 
+  document.title = "Starmovies - Landing Page";
+
+  const [NavbarColor , setNavBarColor] = useState(false);
+
+  const changeNavbarBackColor = () => {
+    setNavBarColor(()=> {
+    return  window.scrollY >= 30 ? true : false
+    });
+  }
+
+  window.addEventListener('scroll',changeNavbarBackColor);
+
+
 
   const scrollToFirst = () =>{
     home.current.scrollIntoView({
       behavior:"smooth" , block:"center"
     });
-    document.title = "Starmovies - Landing Page";
   }
 
 const scrollToSecond = () =>{
   aboutus.current.scrollIntoView({
     behavior:"smooth" , block:"center"
   });  
-  document.title = "Starmovies - About Us";
 }
 
 const scrollToThird = () =>{
   contact.current.scrollIntoView({
     behavior:"smooth" , block:"center"
   });  
-  document.title = "Starmovies - Contact";
 
 }
 
@@ -86,14 +98,14 @@ const scrollToThird = () =>{
   return (
     <>
     <div className={styles.parentContainer}>
-    <NavBar refs = {{scrollToFirst,scrollToSecond,scrollToThird}}/>
+    <NavBar refs = {{scrollToFirst,scrollToSecond,scrollToThird}} backColor = {NavbarColor}/>
     <div className={styles.firstPage} ref={home}>
     <div className={styles.content}>
     <section className={styles.heroSection}>
       <div className={styles.leftSide}>
-        <h1 className={styles.title}>Be Ready</h1>
+        <h1 className={styles.title}>Be Ready. . .</h1>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
-        <button>Explore</button>
+        <Link to="/guestMode">Enplore</Link>
       </div>
       <div className={styles.rightSide}></div>
     </section>
