@@ -10,14 +10,13 @@ function NavBar(props) {
     return props.backColor === true ? "navBarScroll" : "navBarTop"
   }
 
-
   return (
     <nav className={`${checkNavBarColor()}`}>
     <i className='logoIcon'><img src={starmoviesLogo}/></i>
       <ul className='leftList'>
-      <li><button onClick={props.refs.scrollToFirst}>Home</button></li>
-      <li><button onClick={props.refs.scrollToSecond}>About Us</button></li>
-      <li><button onClick={props.refs.scrollToThird}>Contact</button></li>
+      <li><button className={props.whoChoosen.Home ? 'linkChoosen' : ''} onClick={props.refs.scrollToFirst}>Home</button></li>
+      <li><button className={props.whoChoosen.Aboutus ? 'linkChoosen' : ''} onClick={props.refs.scrollToSecond}>About us</button></li>
+      <li><button className={props.whoChoosen.Contact ? 'linkChoosen' : ''} onClick={props.refs.scrollToThird}>Contact</button></li>
       </ul>
       <div className='getStartedBox'>
         <ul className='rightList'>
