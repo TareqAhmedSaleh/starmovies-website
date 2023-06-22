@@ -84,8 +84,8 @@ function LandingPage() {
 
   window.addEventListener('scroll',chcekScrollPosition);
   console.log(window.performance.navigation);
-  let data=window.performance.getEntriesByType("navigation")[0].type;
-console.log(data);
+  let data=window.performance.getEntriesByType("navigation")[0].type; 
+  console.log(data);
   
 
 
@@ -154,7 +154,7 @@ const scrollToThird = () =>{
     </div>
 
     <div className={styles.rightSide2}>
-        <h1 className={styles.title2}>Watch From <h1 style={{color:"#759AFF"}}>Any Device</h1></h1>
+        <h1 className={styles.title2}>Watch From</h1><h1 style={{color:"#759AFF",display:"inline"}}>Any Device</h1>
         <p>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
     </div>
     </section>    
