@@ -13,60 +13,20 @@ html, body{
     --backGroundColor : #08122A;
     --backGroundColor2 : #0D1935;
 }
-.parentContainer{
-    width: 100%;
-    height: 100vh;
-}
+
+
+/*------------------------------------------------------------------------------
+------------------------------- 1st Page -----------------------------------
+--------------------------------------------------------------------------------*/
 .firstPage{
     width: 100%;
-    height: 900px;
+    height: 620px;
     position: relative;
-    background-image:url(../../../photos/AllPosters.jpg);
-    background-position: bottom;
+    background-image:url(../../../photos/AllMoviesWallpaper.png);
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.secondPage{
-    width: 100%;
-   /* background-color: var(--backGroundColor);*/
-    background-image: url(../../../photos/circlesPattern.svg);
-    background-repeat: repeat-x;
-    background-position: center center;
-    padding: 6rem 56px;
-}
-.secondPage .heroSection2{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,1fr);
-    grid-template-rows: auto;
-    gap: 2rem;
-}
-.secondPage .leftSide2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*background-color: white;*/
-    overflow: hidden;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-}
-.secondPage .leftSide2 img{
-    width: 40rem;
-    height: 40rem;
-}
-.secondPage .rightSide2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   /* background-color: #759AFF;*/
-    grid-row-start: 1;
-}
-.thirdPage{
-    width: 100%;
-    background-color: var(--primaryColor);
+    background-attachment: fixed;
 }
 .content{
     background-color:var(--backGroundColor);
@@ -78,17 +38,22 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-.heroSection1{
-   /*background-color: aquamarine;*/
+.content div{
     width: 100%;
     height: 100%;
-    padding: 0 56px;
+   /* background-image: url(../../../photos/Noise\ \(3\).svg);
+    opacity: 0.5;*/
+}
+.heroSection1{
+   /* background-color: aquamarine;*/
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 56px;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: auto;
     gap: 2rem;
-    align-content: center;
+    align-content: flex-end;
     justify-content: space-evenly;
 }
 .heroSection1 .leftSide1{
@@ -99,40 +64,24 @@ html, body{
     align-items: flex-start;
     flex-direction: column;
     column-gap: 10px;
-    
+    height: 500px;
 }
 .title1{
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 4rem;
-    color: white;
-}
-.title2 , .title2 span{
-    margin: 1rem 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 3rem;
-    color: white;
-}
-
-.rightSide2 p{
-    margin:0.3rem 0;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px;
-    line-height: 2.5rem;
+    font-size: 3.5rem;
     color: white;
 }
 .leftSide1 p{
-    margin:1rem 0;
-    font-size: 2rem;
+    margin:0.5rem 0;
+    font-size: 1.5rem;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 .leftSide1 .exploreCTA{
-    margin:1rem 0;
+    margin:2rem 0;
     background-color: var(--primaryColor);
     color: white;
     padding: 12px 20px;
@@ -145,83 +94,272 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .leftSide1 .exploreCTA a{
     color: white;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
     text-decoration: none;
     word-spacing: 3px;
+    position: relative;
 }
-.heroSection1 .rightSide1{
-    /*background-color: #759AFF;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.leftSide1 .chevronIcon{
+    width:1.5rem;
+    height:1.5rem;
 }
-
-.heroSection1 .rightSide1 .circle{
-    width: 25rem;
-    height: 25rem;
-    background-color: white;
+/*.leftSide1 .exploreCTA::after{
+    content: "";
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    background-color: aquamarine;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+}*/
+.heroSection1 .rightSide1{
+   /* background-color: aquamarine;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.heroSection1 .rightSide1 .circle{
+    width: 100%;
+    /*height: 25rem;
+    /*width: 100%;
+    height: 50%;*/
+   /* background-color: white;
+   /* border-bottom-left-radius: 0;
+    border-bottom-right-radius:0;
+    border-top-right-radius:100%;
+    border-top-left-radius: 100%;*/
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    display: none;
+
 }
 
 .heroSection1 .rightSide1 .circle img{
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
 }
+
+.heroSection1 .rightSide1 .actorSlider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+.actorSlider .backCircles{
+    width:100%;
+    height: 100%;
+    z-index: 2;
+}
+.actorSlider .backCircles div:first-child{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    background-color: white;
+    clip-path: circle(54.1% at 50% 100%);
+    z-index: 2;
+}
+.actorSlider .backCircles div:last-child{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    background-color: #759AFF;
+    clip-path: circle(54.1% at 48% 100%);
+    z-index: 1;
+}
+.actorSlider .actorImage{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 3;
+    /*background-color: aquamarine;*/
+}
+.actorSlider .actorImage img{
+    width: fit-content;
+    height: 30rem;
+    z-index: 3;
+    overflow: hidden;
+}
+
+/*------------------------------------------------------------------------------
+------------------------------- 2nd Page -----------------------------------
+--------------------------------------------------------------------------------*/
+.secondPage{
+    width: 100%;
+   /* background-color: var(--backGroundColor);*/
+    background-image: url(../../../photos/circlesPattern.svg);
+    padding: 6rem 56px;
+    position: relative;
+    overflow: hidden;
+}
+.secondPage .circlesImage{
+    width: auto;
+    height: auto;
+    /*background-color: white;*/
+    position: absolute;
+    top: 300px;
+    right: -50px;
+
+}
+.secondPage .heroSection2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-template-rows: auto;
+    gap: 4rem;
+}
+.title2 , .title2 h1{
+    margin: 0.5rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+.rightSide2 p{
+    margin:0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 2.5rem;
+    color: white;
+    text-align: center;
+}
+.secondPage .leftSide2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: white;
+    /*overflow: hidden;*/
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.secondPage .leftSide2 img{
+    width: 70rem;
+    height: 45rem;
+}
+.secondPage .rightSide2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   /* background-color: #759AFF;*/
+    grid-row-start: 1;
+}
+
+
+
+/*------------------------------------------------------------------------------
+------------------------------- 3rd Page -----------------------------------
+--------------------------------------------------------------------------------*/
+.thirdPage{
+    width: 100%;
+    background-color: var(--primaryColor);
+}
+
 
 @media (width <= 420px){
     
     html{
         font-size: 8px;
     }
+    .firstPage{
+        height: 100vh;
+    }
     .heroSection1 .leftSide1{
-        grid-row-start: 2;
         align-items: center;
         text-align: center;
-
+    }
+    .heroSection2 .rightSide2{
+        text-align: center;
+    }
+    .title2 , .title2 h1{
+        font-size: 2rem;
+    }
+    .rightSide2 p{
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
 
 }
 
-@media (width <= 720px){
+@media (420px < width <= 720px){
     html{
         font-size: 12px;
     }
+    .firstPage{
+        height: 100vh;
+    }
+    .heroSection1{
+        padding: 0 56px;
+    }
     .heroSection1 .leftSide1{
-        grid-row-start: 2;
         align-items: center;
         text-align: center;
+        height: auto;
     }
-    .heroSection1 .rightSide1 .circle{
+    .heroSection1 .rightSide1{
+        height: auto;
+    }
+    .heroSection1 .rightSide1 .actorImage{
         width: 20rem;
         height: 20rem;
     }
-    .heroSection1 .rightSide1 .circle img{
+    .heroSection1 .rightSide1 .actorImage img{
         width: 400px;
         height: 300px;
     }
-    
+    .secondPage .leftSide2 img{
+        width: 35rem;
+        height:22rem;
+    }
+    .title2 , .title2 h1{
+        font-size: 2.5rem;
+    }
+    .rightSide2 p{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
 
 }
 
-@media (width > 720px){
+@media (1200px >= width > 720px){
     html{
         font-size: 16px;
+    }
+    .secondPage .leftSide2 img{
+        width: 45rem;
+        height:27rem;
+    }
+    .secondPage .heroSection2{
+        background-color: #759AFF;
     }
 
 }

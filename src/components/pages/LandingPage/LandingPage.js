@@ -7,10 +7,6 @@ import {GoChevronRight} from "react-icons/go";
 
 function LandingPage() {
 
-  const home = useRef();
-  const aboutus = useRef();
-  const contact = useRef();
-
   /*const [Actors,setActors] = useState([]);
 
   const url = 'https://imdb8.p.rapidapi.com/actors/get-all-images?nconst=nm0001667';
@@ -39,9 +35,6 @@ function LandingPage() {
 
 
 
-
-
-
 /*  const url = 'https://actor-movie-api1.p.rapidapi.com/getid/Tom%20Holland?apiKey=62ffac58c57333a136053150eaa1b587';
   const options = {
     method: 'GET',
@@ -62,10 +55,15 @@ function LandingPage() {
     }
 	},[]);*/
 
-  document.title = "Starmovies - Landing Page";
+
+  const home = useRef();
+  const aboutus = useRef();
+  const contact = useRef();
 
   const [NavbarColor , setNavBarColor] = useState(false);
   const [LinkBorderColor , setLinkBorderColor] = useState({Home:true , Aboutus:false , Contact:false})
+
+  document.title = "Starmovies - Landing Page";
 
 
   const chcekScrollPosition = () => {
@@ -85,7 +83,10 @@ function LandingPage() {
   }
 
   window.addEventListener('scroll',chcekScrollPosition);
-
+  console.log(window.performance.navigation);
+  let data=window.performance.getEntriesByType("navigation")[0].type;
+console.log(data);
+  
 
 
   const scrollToFirst = () =>{
@@ -117,31 +118,43 @@ const scrollToThird = () =>{
   
    {/* Home Section */}
     <section className={styles.firstPage} ref={home}>
-    <div className={styles.content}></div>
+    <div className={styles.content}><div></div></div>
     <section className={styles.heroSection1}>
       <div className={styles.leftSide1}>
         <h1 className={styles.title1}>Be Ready. . .</h1>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
-        <div className={styles.exploreCTA}><Link to="/login">Explore Now</Link> <GoChevronRight style= {{width:"1.5rem",height:"1.5rem"}}/></div>
+        <div className={styles.exploreCTA}><Link to="/login">Explore Now</Link> <GoChevronRight  className={styles.chevronIcon}/></div>
       </div>
       <div className={styles.rightSide1}>
-      <div className={styles.circle} scroll="no">
+
+      <div className={styles.actorSlider}>
+          <div className={styles.backCircles}>
+            <div></div>
+            <div></div>
+          </div>
+          <div className={styles.actorImage}><img src={require('../../../photos/Black Panther.png')} style={{display: "block"}}/></div>
+          {/*<img src={require('../../../photos/robert.png')} style={{display:"none"}}/>
+          <img src={require('../../../photos/john wick.png')} style={{display:"block"}}/>*/}
+        </div>
+
+      {/*<div className={styles.circle} scroll="no">
         <img src={require('./robert.png')}/>
-        {/*<div className={styles.image1}>tareq</div>*/}
-      </div>
+        <img src={require('../../../photos/Star Movies - Watch Movies Online.gif')}/>
+      </div>*/}
       </div>
     </section>
     </section>
 
     {/* Aboutus Section */}
     <section className={styles.secondPage} ref={aboutus}>
+    <img className={styles.circlesImage} src={require('../../../photos/Circles.svg')?.default}/>    
     <section className={styles.heroSection2}>
-    <div className={styles.leftSide2}>    
-    <img src={require('../../../photos/AllSizes.svg')?.default}/>
+    <div className={styles.leftSide2}>
+    <img src={require('../../../photos/AllScreenSizes (2).png')}/>
     </div>
 
     <div className={styles.rightSide2}>
-        <h1 className={styles.title2}>Watch From <span style={{color:"#759AFF"}}>Any Device</span></h1>
+        <h1 className={styles.title2}>Watch From <h1 style={{color:"#759AFF"}}>Any Device</h1></h1>
         <p>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
     </div>
     </section>    

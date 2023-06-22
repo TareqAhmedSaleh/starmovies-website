@@ -278,6 +278,9 @@ span{
     font p{
         font-size: 1rem;
     }
+    .leftSide .altLogins{
+        flex-direction: column;
+    }
     .leftSide .altLogins > button{
         font-size: 0.8rem;
     }

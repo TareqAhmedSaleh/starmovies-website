@@ -68,7 +68,7 @@ img{
     background-color: brown;*/
 
 }
-.leftList li,.rightList li{
+.leftList li{
     margin: 0px 1.5rem;
     list-style: none;
 }
@@ -119,26 +119,43 @@ img{
     width: 100%;
    /* background-color: aquamarine;*/
 }
+.rightList li{
+    list-style: none;
+    margin: 0 1rem;
+}
 .getStartedBox .rightList li:nth-child(2){
     margin-right: 0px;
 }
 .getStartedBox .rightList li:nth-child(2) a{
     background-color: var(--primaryColor);
-    color: var(--backGroundColor);
+    color: var(--whiteColor);
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     margin-right: 0px;
-    padding: 8px 16px;
+    padding: 8px 24px;
+    border-radius: 100vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    font-weight: 500;
+    box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
+}
+.getStartedBox .rightList li:nth-child(1) a{
+    /*background-color: var(--primaryColor);*/
+    /*background-color: var(--primaryColor);*/
+    color: var(--primaryColor);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    padding: 8px 24px;
+    border:1.5px solid var(--primaryColor);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     font-weight: 500;
-    box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
-}
-.getStartedBox .rightList li:nth-child(1) a{
-    /*background-color: var(--primaryColor);*/
+   /* box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);*/
 }
 
 i{
