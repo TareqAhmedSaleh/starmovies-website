@@ -60,8 +60,23 @@ function LandingPage() {
   const aboutus = useRef();
   const contact = useRef();
 
+  const ActorImages = ['photos/Black Panther.png' , 'photos/leonardo de caprio.png' ,'photos/robert.png']
+
   const [NavbarColor , setNavBarColor] = useState(false);
   const [LinkBorderColor , setLinkBorderColor] = useState({Home:true , Aboutus:false , Contact:false})
+  const [ActorImageSlider , setActorImageSlider] = useState(ActorImages[0])
+
+  const ss = './john wick.png';
+
+  useEffect(()=>{
+    if(window.performance.navigation)
+    setActorImageSlider(
+      ()=> {
+        const randomImage = ActorImages[(Math.floor(Math.random() * ActorImages.length))];
+        console.log(randomImage);
+        return randomImage;
+      })
+  },[])
 
   document.title = "Starmovies - Landing Page";
 
@@ -123,7 +138,9 @@ const scrollToThird = () =>{
       <div className={styles.leftSide1}>
         <h1 className={styles.title1}>Be Ready. . .</h1>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
-        <div className={styles.exploreCTA}><Link to="/login">Explore Now</Link> <GoChevronRight  className={styles.chevronIcon}/></div>
+        <div className={styles.subscribeBox}>
+        <input type='text' placeholder='Enter your e-mail address'/>
+        <Link to="/login">Subscribe</Link></div>
       </div>
       <div className={styles.rightSide1}>
 
@@ -132,7 +149,7 @@ const scrollToThird = () =>{
             <div></div>
             <div></div>
           </div>
-          <div className={styles.actorImage}><img src={require('../../../photos/Black Panther.png')} style={{display: "block"}}/></div>
+          <div className={styles.actorImage}><img src={require(`../../../${ActorImageSlider}`)} style={{display: "block"}}/></div>
           {/*<img src={require('../../../photos/robert.png')} style={{display:"none"}}/>
           <img src={require('../../../photos/john wick.png')} style={{display:"block"}}/>*/}
         </div>

@@ -52,7 +52,7 @@ html, body{
     position: absolute;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 4rem;
     align-content: flex-end;
     justify-content: space-evenly;
 }
@@ -79,32 +79,65 @@ html, body{
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     line-height: 2rem;
+    width: 80%;
 }
-.leftSide1 .exploreCTA{
+.leftSide1 .subscribeBox{
     margin:2rem 0;
-    background-color: var(--primaryColor);
+    background-color: white;
+    width: 80%;
     color: white;
-    padding: 12px 20px;
+    height: fit-content;
+    padding: 8px 8px 8px 24px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:16px;
+}
+.leftSide1 .subscribeBox input[type = text]{
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+}
+.leftSide1 .subscribeBox input[type = text]::placeholder{
+    font-size: 1rem;
+    color: var(--backGroundColor) !important;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.leftSide1 .subscribeBox a{
+    color: white;
+    padding: 12px 40px;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-.leftSide1 .exploreCTA a{
-    color: white;
+    /*background: #759AFF;*/
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
-    box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
     text-decoration: none;
     word-spacing: 3px;
-    position: relative;
+    transition: 200ms ease-in-out all;
+    -webkit-transition: 200ms ease-in-out all;
+    -moz-transition: 200ms ease-in-out all;
+    -ms-transition: 200ms ease-in-out all;
+    -o-transition: 200ms ease-in-out all;
+    background: linear-gradient(to right,#4d7cfd,#759AFF);
+
+}
+.leftSide1 .subscribeBox a:hover{
+    background: linear-gradient(to right,#4d7cfd,#759AFF);
 }
 .leftSide1 .chevronIcon{
     width:1.5rem;
@@ -314,9 +347,9 @@ html, body{
     html{
         font-size: 12px;
     }
-    .firstPage{
+    /*.firstPage{
         height: 100vh;
-    }
+    }*/
     .heroSection1{
         padding: 0 56px;
     }

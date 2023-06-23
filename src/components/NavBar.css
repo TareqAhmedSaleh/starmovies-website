@@ -127,7 +127,7 @@ img{
     margin-right: 0px;
 }
 .getStartedBox .rightList li:nth-child(2) a{
-    background-color: var(--primaryColor);
+    /*background-color: var(--primaryColor);*/
     color: var(--whiteColor);
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
@@ -140,6 +140,7 @@ img{
     -o-border-radius: 100vw;
     font-weight: 500;
     box-shadow: 0 0 1px 8px rgb(117, 154, 255, 0.1);
+    background: linear-gradient(to right,#4d7cfd,#759AFF);
 }
 .getStartedBox .rightList li:nth-child(1) a{
     /*background-color: var(--primaryColor);*/
