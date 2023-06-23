@@ -1,21 +1,41 @@
 {
   "files": {
-    "main.css": "/starmovies-website/static/css/main.6312c957.css",
-    "main.js": "/starmovies-website/static/js/main.f72077e5.js",
-    "static/media/AllMoviesWallpaper.png": "/starmovies-website/static/media/AllMoviesWallpaper.d2a80bfeac2ab58ffce7.png",
+    "main.css": "/starmovies-website/static/css/main.bd6c2ee8.css",
+    "main.js": "/starmovies-website/static/js/main.d112ff90.js",
+    "static/js/787.e72b4b8f.chunk.js": "/starmovies-website/static/js/787.e72b4b8f.chunk.js",
+    "static/media/AllScreenSizes.svg": "/starmovies-website/static/media/AllScreenSizes.c6b4ac389c484fdf5a3d.svg",
+    "static/media/AllSizes.svg": "/starmovies-website/static/media/AllSizes.408fa2a55753b1459fc5.svg",
+    "static/media/3dBackground.png": "/starmovies-website/static/media/3dBackground.316549556ef296bc2f05.png",
     "static/media/iMacMockup.svg": "/starmovies-website/static/media/iMacMockup.c1d79790f7eecfa43ce091848f4125ac.svg",
     "static/media/AllScreenSizes (2).png": "/starmovies-website/static/media/AllScreenSizes (2).ed48613f4c18f3239fde.png",
+    "static/media/Noise (1).svg": "/starmovies-website/static/media/Noise (1).48dc178ffb3b82362c18.svg",
+    "static/media/AllMoviesWallpaper.png": "/starmovies-website/static/media/AllMoviesWallpaper.688bf23325ba2bd164a4.png",
+    "static/media/AllScreenSizes (1).png": "/starmovies-website/static/media/AllScreenSizes (1).688531bc05023a1ee187.png",
+    "static/media/AllScreenSizes.png": "/starmovies-website/static/media/AllScreenSizes.fd1eb452861e854616d8.png",
+    "static/media/Noise (2).svg": "/starmovies-website/static/media/Noise (2).890c8f1ec6982b520b21.svg",
+    "static/media/john wick.png": "/starmovies-website/static/media/john wick.9e8c85fa439ff14baf8f.png",
+    "static/media/Star Movies - Watch Movies Online.zip": "/starmovies-website/static/media/Star Movies - Watch Movies Online.9fe4012306e5e6535dd1.zip",
+    "static/media/iMac.png": "/starmovies-website/static/media/iMac.308a59c511ddb4dd91e5.png",
     "static/media/Black Panther.png": "/starmovies-website/static/media/Black Panther.d65cf3804662fb03cf27.png",
     "static/media/AllPosters.jpg": "/starmovies-website/static/media/AllPosters.3aa7529203cee8fcb427.jpg",
+    "static/media/Star Movies - Watch Movies Online (1).gif": "/starmovies-website/static/media/Star Movies - Watch Movies Online (1).ce82adab0f2c7665b0b5.gif",
+    "static/media/robert.png": "/starmovies-website/static/media/robert.fb9b47f1809f8702b18e.png",
+    "static/media/Noise (3).svg": "/starmovies-website/static/media/Noise (3).ef9cff3360f980ef0456.svg",
+    "static/media/Star Movies - Watch Movies Online.gif": "/starmovies-website/static/media/Star Movies - Watch Movies Online.28941931de759bf81069.gif",
+    "static/media/Noise.svg": "/starmovies-website/static/media/Noise.ad4a8b8fe07966e2de40.svg",
+    "static/media/leonardo de caprio.png": "/starmovies-website/static/media/leonardo de caprio.995e283f6851594f07c6.png",
     "static/media/starmoviesLogo.svg": "/starmovies-website/static/media/starmoviesLogo.1ae1358c9391bd1be9195694d9262f17.svg",
+    "static/media/logo.svg": "/starmovies-website/static/media/logo.6ce24c58023cc2f8fd88.svg",
+    "static/media/circlesPattern (3).svg": "/starmovies-website/static/media/circlesPattern (3).ac47d9ebd253cc8f2e59.svg",
     "static/media/circlesPattern.svg": "/starmovies-website/static/media/circlesPattern.095beadb883f04d2eb3d.svg",
     "index.html": "/starmovies-website/index.html",
     "static/media/Circles.svg": "/starmovies-website/static/media/Circles.58972b63853743b2dce2980727d6db56.svg",
-    "main.6312c957.css.map": "/starmovies-website/static/css/main.6312c957.css.map",
-    "main.f72077e5.js.map": "/starmovies-website/static/js/main.f72077e5.js.map"
+    "main.bd6c2ee8.css.map": "/starmovies-website/static/css/main.bd6c2ee8.css.map",
+    "main.d112ff90.js.map": "/starmovies-website/static/js/main.d112ff90.js.map",
+    "787.e72b4b8f.chunk.js.map": "/starmovies-website/static/js/787.e72b4b8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6312c957.css",
-    "static/js/main.f72077e5.js"
+    "static/css/main.bd6c2ee8.css",
+    "static/js/main.d112ff90.js"
   ]
 }
