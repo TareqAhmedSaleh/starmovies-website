@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/starmovies-website/static/css/main.93636fb3.css",
-    "main.js": "/starmovies-website/static/js/main.20eab940.js",
+    "main.css": "/starmovies-website/static/css/main.49438ca6.css",
+    "main.js": "/starmovies-website/static/js/main.0444214d.js",
     "static/js/787.e72b4b8f.chunk.js": "/starmovies-website/static/js/787.e72b4b8f.chunk.js",
+    "static/media/video.mp4": "/starmovies-website/static/media/video.ddaab34e35629ff0bc93.mp4",
     "static/media/videoplayback (1).mp4": "/starmovies-website/static/media/videoplayback (1).f0fdde042b53939e0f59.mp4",
     "static/media/videoplayback.mp4": "/starmovies-website/static/media/videoplayback.ad6ade80028bc5e5461d.mp4",
     "static/media/3dBackground.png": "/starmovies-website/static/media/3dBackground.316549556ef296bc2f05.png",
@@ -28,18 +29,21 @@
     "static/media/Star Movies - Watch Movies Online.gif": "/starmovies-website/static/media/Star Movies - Watch Movies Online.28941931de759bf81069.gif",
     "static/media/Noise.svg": "/starmovies-website/static/media/Noise.ad4a8b8fe07966e2de40.svg",
     "static/media/leonardo de caprio.png": "/starmovies-website/static/media/leonardo de caprio.995e283f6851594f07c6.png",
+    "static/media/jw3.jpg": "/starmovies-website/static/media/jw3.d090e2f19e1eba20cabd.jpg",
+    "static/media/jw.jpg": "/starmovies-website/static/media/jw.5c2ebe1acc93bc7849aa.jpg",
+    "static/media/jw2.jpg": "/starmovies-website/static/media/jw2.fd66d029a6886ca0269c.jpg",
     "static/media/starmoviesLogo.svg": "/starmovies-website/static/media/starmoviesLogo.1ae1358c9391bd1be9195694d9262f17.svg",
     "static/media/logo.svg": "/starmovies-website/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "static/media/circlesPattern (3).svg": "/starmovies-website/static/media/circlesPattern (3).ac47d9ebd253cc8f2e59.svg",
     "static/media/circlesPattern.svg": "/starmovies-website/static/media/circlesPattern.095beadb883f04d2eb3d.svg",
     "index.html": "/starmovies-website/index.html",
     "static/media/Circles.svg": "/starmovies-website/static/media/Circles.58972b63853743b2dce2980727d6db56.svg",
-    "main.93636fb3.css.map": "/starmovies-website/static/css/main.93636fb3.css.map",
-    "main.20eab940.js.map": "/starmovies-website/static/js/main.20eab940.js.map",
+    "main.49438ca6.css.map": "/starmovies-website/static/css/main.49438ca6.css.map",
+    "main.0444214d.js.map": "/starmovies-website/static/js/main.0444214d.js.map",
     "787.e72b4b8f.chunk.js.map": "/starmovies-website/static/js/787.e72b4b8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93636fb3.css",
-    "static/js/main.20eab940.js"
+    "static/css/main.49438ca6.css",
+    "static/js/main.0444214d.js"
   ]
 }
