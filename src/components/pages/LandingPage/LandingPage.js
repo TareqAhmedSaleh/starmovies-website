@@ -4,6 +4,8 @@ import styles from './LandingPage.module.css'
 import { Link } from 'react-router-dom'
 import { faL, faSlash } from '@fortawesome/free-solid-svg-icons';
 import {GoChevronRight} from "react-icons/go";
+import { counter } from '@fortawesome/fontawesome-svg-core';
+import ReactPlayer from 'react-player';
 
 function LandingPage() {
 
@@ -60,20 +62,66 @@ function LandingPage() {
   const aboutus = useRef();
   const contact = useRef();
 
-  const ActorImages = ['photos/Black Panther.png' , 'photos/leonardo de caprio.png' ,'photos/robert.png']
-
+  const ActorImages = ['photos/Black Panther.png' , 'photos/leonardo de caprio.png' ,'photos/robert.png','photos/tom holland.png','photos/berlin.png','photos/black panther 2.png']
+  const Title = ['B','e',' ','R','e','a','d','y','.',' ','.',' ','.']; 
   const [NavbarColor , setNavBarColor] = useState(false);
   const [LinkBorderColor , setLinkBorderColor] = useState({Home:true , Aboutus:false , Contact:false})
   const [ActorImageSlider , setActorImageSlider] = useState(ActorImages[0])
+  const [AutoTitle,setAutoTitle] = useState("");
+  const [Counter, setCounter] = useState(0);
+  const [CheckTitle,setCheckTitle] = useState("forward");
+  const [InputStyle] = useState({
+    width : "80%" ,
+    display: "inline-flex",
+    paddingLeft:"24px",
+    transition: "all 1s ease",
+  })
+  const [onLoadCheck,setonLoadCheck] = useState(false);
 
-  const ss = './john wick.png';
+  useEffect(()=>{
+    setonLoadCheck(true);
+  },[])
+  const windowOnLoad = () => {
+   this.setonLoadCheck(true);
+  }
 
+  useEffect(()=>{
+
+    switch(CheckTitle){
+      case "forward":
+        if(Counter < Title.length)
+        {console.log(AutoTitle);
+          setTimeout(()=>{
+          setAutoTitle((previous)=>{
+            return previous+Title[Counter];
+          })
+        },300);setCounter((previous)=> previous+=1);}
+        else
+        setCheckTitle("backward");     
+      break;
+
+      /*case "backward":
+        if(Counter >= 0)
+        {setTimeout(()=>{
+          setAutoTitle((previous)=>{
+            previous = previous.substring(0,Counter);
+            return previous;
+          })
+        },300);setCounter((previous)=>previous=previous - 1);console.log(Counter);}
+        else
+        setCheckTitle("forward");     
+      break;*/
+    }
+},[AutoTitle])
+  
+
+
+  /* Generate Random Image While Page Reload */
   useEffect(()=>{
     if(window.performance.navigation)
     setActorImageSlider(
       ()=> {
         const randomImage = ActorImages[(Math.floor(Math.random() * ActorImages.length))];
-        console.log(randomImage);
         return randomImage;
       })
   },[])
@@ -98,9 +146,9 @@ function LandingPage() {
   }
 
   window.addEventListener('scroll',chcekScrollPosition);
-  console.log(window.performance.navigation);
+  /*console.log(window.performance.navigation);
   let data=window.performance.getEntriesByType("navigation")[0].type; 
-  console.log(data);
+  console.log(data);*/
   
 
 
@@ -136,10 +184,10 @@ const scrollToThird = () =>{
     <div className={styles.content}><div></div></div>
     <section className={styles.heroSection1}>
       <div className={styles.leftSide1}>
-        <h1 className={styles.title1}>Be Ready. . .</h1>
+        <input className={styles.inputTitle} type='text' value={AutoTitle} autoFocus readOnly/>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
-        <div className={styles.subscribeBox}>
-        <input type='text' placeholder='Enter your e-mail address'/>
+        <div className={styles.subscribeBox} style={onLoadCheck ? InputStyle : {}}>
+        <input type='text' placeholder='Enter your e-mail address' style={onLoadCheck ? {display:"inline-flex"} : {}}/>
         <Link to="/login">Subscribe</Link></div>
       </div>
       <div className={styles.rightSide1}>
@@ -149,7 +197,7 @@ const scrollToThird = () =>{
             <div></div>
             <div></div>
           </div>
-          <div className={styles.actorImage}><img src={require(`../../../${ActorImageSlider}`)} style={{display: "block"}}/></div>
+          <div className={styles.actorImage}><img src={require(`../../../${ActorImageSlider}`)}/></div>
           {/*<img src={require('../../../photos/robert.png')} style={{display:"none"}}/>
           <img src={require('../../../photos/john wick.png')} style={{display:"block"}}/>*/}
         </div>
@@ -167,14 +215,27 @@ const scrollToThird = () =>{
     <img className={styles.circlesImage} src={require('../../../photos/Circles.svg')?.default}/>    
     <section className={styles.heroSection2}>
     <div className={styles.leftSide2}>
-    <img src={require('../../../photos/AllScreenSizes (2).png')}/>
+    <img src={require('../../../photos/AllScreenSizes3.png')}/>
     </div>
 
     <div className={styles.rightSide2}>
-        <h1 className={styles.title2}>Watch From</h1><h1 style={{color:"#759AFF",display:"inline"}}>Any Device</h1>
+        <div className={styles.title2}>
+        <h1 >Watch From</h1><h1 style={{color:"#759AFF"}}>Any Device</h1>
+        </div>
         <p>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
     </div>
     </section>    
+    
+    <section className={styles.imageGif}>
+    <div className={styles.rightSide2} style={{position:"absolute" , width:"100%",height:"100%"}}>
+        <div className={styles.content}><div></div></div>
+        <div className={styles.title2} style={{zIndex:"22"}}>
+        <h1 >Watch From</h1><h1 style={{color:"#759AFF"}}>Any Device</h1>
+        </div>
+        <p style={{zIndex:"23"}}>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
+    </div>
+    <ReactPlayer url={require('../../../photos/videoplayback (1).mp4')} loop playing muted controls={false} pip={false} width="100vw" height="900px" />
+    </section>
 
     </section>
 
