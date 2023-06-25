@@ -17,8 +17,8 @@ function NavBar(props) {
       <li><button className={props.whoChoosen.Home ? 'linkChoosen' : ''} onClick={props.refs.scrollToFirst}>Home</button></li>
       <li><button className={props.whoChoosen.Aboutus ? 'linkChoosen' : ''} onClick={props.refs.scrollToSecond}>About us</button></li>
       <li><button className={props.whoChoosen.Contact ? 'linkChoosen' : ''} onClick={props.refs.scrollToThird}>Pricing</button></li>
-      <li><button className={props.whoChoosen.Contact ? 'linkChoosen' : ''} onClick={props.refs.scrollToThird}>FAQs</button></li>
-      <li><button className={props.whoChoosen.Contact ? 'linkChoosen' : ''} onClick={props.refs.scrollToThird}>Contact</button></li>
+      <li><button className={''} onClick={props.refs.scrollToThird}>FAQs</button></li>
+      <li><button className={''} onClick={props.refs.scrollToThird}>Contact</button></li>
       </ul>
       <div className='getStartedBox'>
         <ul className='rightList'>

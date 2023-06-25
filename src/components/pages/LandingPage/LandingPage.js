@@ -1,11 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
+import ReactDOM from 'react-dom/client';
 import NavBar from '../../NavBar';
 import styles from './LandingPage.module.css'
 import { Link } from 'react-router-dom'
 import { faL, faSlash } from '@fortawesome/free-solid-svg-icons';
 import {GoChevronRight} from "react-icons/go";
 import { counter } from '@fortawesome/fontawesome-svg-core';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
+import { Player, ControlBar } from 'video-react';
+import 'video-react/dist/video-react.css';
+import VideoPlayer from 'react-video-js-player';
+import backGround from '../../../photos/jw3.jpg';
+import Footer from '../../Footer';
+
+
+
 
 function LandingPage() {
 
@@ -62,7 +71,7 @@ function LandingPage() {
   const aboutus = useRef();
   const contact = useRef();
 
-  const ActorImages = ['photos/Black Panther.png' , 'photos/leonardo de caprio.png' ,'photos/robert.png','photos/tom holland.png','photos/berlin.png','photos/black panther 2.png']
+  const ActorImages = ['photos/Black Panther.png' , 'photos/leonardo de caprio.png' ,'photos/robert.png','photos/tom holland.png']
   const Title = ['B','e',' ','R','e','a','d','y','.',' ','.',' ','.']; 
   const [NavbarColor , setNavBarColor] = useState(false);
   const [LinkBorderColor , setLinkBorderColor] = useState({Home:true , Aboutus:false , Contact:false})
@@ -95,7 +104,7 @@ function LandingPage() {
           setAutoTitle((previous)=>{
             return previous+Title[Counter];
           })
-        },300);setCounter((previous)=> previous+=1);}
+        },100);setCounter((previous)=> previous+=1);}
         else
         setCheckTitle("backward");     
       break;
@@ -184,7 +193,7 @@ const scrollToThird = () =>{
     <div className={styles.content}><div></div></div>
     <section className={styles.heroSection1}>
       <div className={styles.leftSide1}>
-        <input className={styles.inputTitle} type='text' value={AutoTitle} autoFocus readOnly/>
+        <input className={styles.inputTitle} type='text' value={AutoTitle} autoFocus/>
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
         <div className={styles.subscribeBox} style={onLoadCheck ? InputStyle : {}}>
         <input type='text' placeholder='Enter your e-mail address' style={onLoadCheck ? {display:"inline-flex"} : {}}/>
@@ -228,21 +237,53 @@ const scrollToThird = () =>{
     
     <section className={styles.imageGif}>
     <div className={styles.rightSide2} style={{position:"absolute" , width:"100%",height:"100%"}}>
-        <div className={styles.content}><div></div></div>
+       <div className={styles.content2} style={{zIndex:"21"}}><div></div></div>
         <div className={styles.title2} style={{zIndex:"22"}}>
         <h1 >Watch From</h1><h1 style={{color:"#759AFF"}}>Any Device</h1>
         </div>
         <p style={{zIndex:"23"}}>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
     </div>
-    <ReactPlayer url={require('../../../photos/videoplayback (1).mp4')} loop playing muted controls={false} pip={false} width="100vw" height="900px" />
+
+
+    <div className={styles.imagePoster} style={{position:"absolute",zIndex:"23",left:"15%",top:"50%",width:"350px",height:"350px",transform:"translate(-50%,-50%)" ,borderRadius:"32px",backgroundImage: "url(" + backGround + ")"}} >
+    </div>
+    {/*<ReactPlayer url={require('../../../photos/videoplayback (1).mp4')} loop playing muted controls={false} pip={false} width="100vw" height="900px" className={styles.reactPlayer}/>
+    <Player autoPlay loop src={require('../../../photos/videoplayback (1).mp4')} className={styles.Player}>
+      <ControlBar autoHide={false} className="my-class"/>
+    </Player>
+
+    <VideoPlayer
+                    controls={false}
+                    src={require("../../../photos/videoplayback.mp4")}
+                    width="200"
+                    height="200"
+                    autoPlay
+                    loop
+                    className={styles.videoPlayer}
+                />*/}
+
+      <video autoPlay loop muted className={styles.videoPlayer}>
+        <source src={require('../../../photos/videoplayback.mp4')} type='video/mp4'/>
+      </video>
     </section>
 
+
+
+    <section className={styles.heroSection2}>
+    <div className={styles.content3} style={{zIndex:"21"}}><div></div></div>
+    <div className={styles.imageContainer}>
+    </div>
+
+    </section>    
+    
     </section>
+
+    <Footer/>
 
     {/* Contact Section */}
     <section className={styles.thirdPage} ref={contact}>
     </section>
-
+    
     </>
   )
 }
