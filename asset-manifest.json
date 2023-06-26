@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starmovies-website/static/css/main.d55d02ef.css",
-    "main.js": "/starmovies-website/static/js/main.992d7b63.js",
+    "main.css": "/starmovies-website/static/css/main.8197b23b.css",
+    "main.js": "/starmovies-website/static/js/main.f75f750a.js",
     "static/js/787.e72b4b8f.chunk.js": "/starmovies-website/static/js/787.e72b4b8f.chunk.js",
     "static/media/video.mp4": "/starmovies-website/static/media/video.ddaab34e35629ff0bc93.mp4",
     "static/media/videoplayback (1).mp4": "/starmovies-website/static/media/videoplayback (1).f0fdde042b53939e0f59.mp4",
@@ -39,12 +39,12 @@
     "index.html": "/starmovies-website/index.html",
     "static/media/hh.svg": "/starmovies-website/static/media/hh.722af777649d3fdc50ff.svg",
     "static/media/Circles.svg": "/starmovies-website/static/media/Circles.58972b63853743b2dce2980727d6db56.svg",
-    "main.d55d02ef.css.map": "/starmovies-website/static/css/main.d55d02ef.css.map",
-    "main.992d7b63.js.map": "/starmovies-website/static/js/main.992d7b63.js.map",
+    "main.8197b23b.css.map": "/starmovies-website/static/css/main.8197b23b.css.map",
+    "main.f75f750a.js.map": "/starmovies-website/static/js/main.f75f750a.js.map",
     "787.e72b4b8f.chunk.js.map": "/starmovies-website/static/js/787.e72b4b8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d55d02ef.css",
-    "static/js/main.992d7b63.js"
+    "static/css/main.8197b23b.css",
+    "static/js/main.f75f750a.js"
   ]
 }
