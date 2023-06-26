@@ -9,8 +9,6 @@ import {HiOutlineSpeakerphone} from "@react-icons/all-files/hi/HiOutlineSpeakerp
 
 
 
-
-
 function Footer() {
   return (
     <>

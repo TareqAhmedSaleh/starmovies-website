@@ -12,6 +12,7 @@ import 'video-react/dist/video-react.css';
 import VideoPlayer from 'react-video-js-player';
 import backGround from '../../../photos/jw3.jpg';
 import Footer from '../../Footer';
+import { RiCompassDiscoverLine } from "@react-icons/all-files/ri/RiCompassDiscoverLine";
 
 
 
@@ -84,6 +85,7 @@ function LandingPage() {
     display: "inline-flex",
     paddingLeft:"24px",
     transition: "all 1s ease",
+    zIndex:"24"
   })
   const [onLoadCheck,setonLoadCheck] = useState(false);
 
@@ -189,6 +191,7 @@ const scrollToThird = () =>{
     <NavBar refs = {{scrollToFirst,scrollToSecond,scrollToThird}} backColor = {NavbarColor} whoChoosen={LinkBorderColor}/>
   
    {/* Home Section */}
+   {/* leftSide 1*/}
     <section className={styles.firstPage} ref={home}>
     <div className={styles.content}><div></div></div>
     <section className={styles.heroSection1}>
@@ -197,24 +200,18 @@ const scrollToThird = () =>{
         <p>Our website offers a wide selection of movies that you can watch anytime, anywhere. With our easy-to-use interface and high-quality streaming.</p>
         <div className={styles.subscribeBox} style={onLoadCheck ? InputStyle : {}}>
         <input type='text' placeholder='Enter your e-mail address' style={onLoadCheck ? {display:"inline-flex"} : {}}/>
-        <Link to="/login">Subscribe</Link></div>
+        <Link to="/login">Subscribe</Link>
+        </div>
       </div>
+      {/* rightSide */}
       <div className={styles.rightSide1}>
-
       <div className={styles.actorSlider}>
           <div className={styles.backCircles}>
             <div></div>
             <div></div>
           </div>
           <div className={styles.actorImage}><img src={require(`../../../${ActorImageSlider}`)}/></div>
-          {/*<img src={require('../../../photos/robert.png')} style={{display:"none"}}/>
-          <img src={require('../../../photos/john wick.png')} style={{display:"block"}}/>*/}
         </div>
-
-      {/*<div className={styles.circle} scroll="no">
-        <img src={require('./robert.png')}/>
-        <img src={require('../../../photos/Star Movies - Watch Movies Online.gif')}/>
-      </div>*/}
       </div>
     </section>
     </section>
@@ -233,21 +230,52 @@ const scrollToThird = () =>{
         </div>
         <p>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
     </div>
+    </section>
+    </section>
+
+    {/* Aboutus Section */}
+    <section className={styles.thirdPage} ref={aboutus}>
+\    <section className={styles.imageGif}>
+      <div className={styles.rightSide2} style={{position:"absolute" , width:"100%",height:"100%"}}>
+        <div className={styles.content2} style={{zIndex:"21"}}><div></div></div>
+          <div className={styles.textSection} style={{zIndex:"22"}}>
+          <h1 >Ready for a movie night?</h1>          
+          <p style={{zIndex:"23"}}>Our website has everything you need to make it a success. With our user-friendly interface and extensive collection of films, you can easily find the perfect movie for any occasion. So hurry to watch now!</p>
+          </div>
+          <div className={styles.exploreCTA}><Link to="/login">Explore</Link></div>
+      </div>
+
+      <div className={styles.imagePoster} style={{display:"none",position:"absolute",zIndex:"23",left:"15%",top:"50%",width:"350px",height:"350px",transform:"translate(-50%,-50%)" ,borderRadius:"32px",backgroundImage: "url(" + backGround + ")"}} >
+      </div>
+      <video autoPlay loop muted className={styles.videoPlayer}>
+        <source src={require('../../../photos/videoplayback.mp4')} type='video/mp4'/>
+      </video>
+    </section>
+    </section>
+
+    {/* Contact Section */}
+    <section className={styles.fourthPage} ref={contact}>
+    <section className={styles.heroSection2}>
+    <div className={styles.content3} style={{zIndex:"21"}}><div></div></div>
+    <div className={styles.imageContainer}>
+    </div>
     </section>    
+    </section>
+
     
-    <section className={styles.imageGif}>
-    <div className={styles.rightSide2} style={{position:"absolute" , width:"100%",height:"100%"}}>
-       <div className={styles.content2} style={{zIndex:"21"}}><div></div></div>
-        <div className={styles.title2} style={{zIndex:"22"}}>
-        <h1 >Watch From</h1><h1 style={{color:"#759AFF"}}>Any Device</h1>
-        </div>
-        <p style={{zIndex:"23"}}>Enjoy watching movies, series and Tv shows from any where and on any device.</p>
-    </div>
+    <Footer/>
+    
+    </>
+  )
+}
+
+export default LandingPage;
 
 
-    <div className={styles.imagePoster} style={{position:"absolute",zIndex:"23",left:"15%",top:"50%",width:"350px",height:"350px",transform:"translate(-50%,-50%)" ,borderRadius:"32px",backgroundImage: "url(" + backGround + ")"}} >
-    </div>
-    {/*<ReactPlayer url={require('../../../photos/videoplayback (1).mp4')} loop playing muted controls={false} pip={false} width="100vw" height="900px" className={styles.reactPlayer}/>
+
+
+
+  {/*<ReactPlayer url={require('../../../photos/videoplayback (1).mp4')} loop playing muted controls={false} pip={false} width="100vw" height="900px" className={styles.reactPlayer}/>
     <Player autoPlay loop src={require('../../../photos/videoplayback (1).mp4')} className={styles.Player}>
       <ControlBar autoHide={false} className="my-class"/>
     </Player>
@@ -261,31 +289,3 @@ const scrollToThird = () =>{
                     loop
                     className={styles.videoPlayer}
                 />*/}
-
-      <video autoPlay loop muted className={styles.videoPlayer}>
-        <source src={require('../../../photos/videoplayback.mp4')} type='video/mp4'/>
-      </video>
-    </section>
-
-
-
-    <section className={styles.heroSection2}>
-    <div className={styles.content3} style={{zIndex:"21"}}><div></div></div>
-    <div className={styles.imageContainer}>
-    </div>
-
-    </section>    
-    
-    </section>
-
-    <Footer/>
-
-    {/* Contact Section */}
-    <section className={styles.thirdPage} ref={contact}>
-    </section>
-    
-    </>
-  )
-}
-
-export default LandingPage;
